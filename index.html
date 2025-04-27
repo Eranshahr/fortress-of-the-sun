@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortress of the Sun</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(#fdf2e0, #f6d8a9);
+            color: #5c3d25;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Sand Particle Effect */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: url('https://i.imgur.com/SpPFX8b.png') repeat;
+            opacity: 0.04;
+            animation: drift 100s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes drift {
+            from {transform: translate(0, 0);}
+            to {transform: translate(-500px, 500px);}
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 80px 20px 20px;
+            z-index: 1;
+        }
+
+        .sun {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #ffd56b 40%, #f5b042 70%, transparent 70%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px);}
+            50% { transform: translateY(-20px);}
+        }
+
+        header img {
+            width: 220px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 20px 0 10px;
+            text-shadow: 1px 1px #ffe8b5;
+        }
+
+        p.tagline {
+            font-size: 1.2em;
+            color: #aa8055;
+        }
+
+        section.description {
+            max-width: 700px;
+            text-align: center;
+            margin: 50px auto 20px;
+            padding: 0 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        section.screenshot {
+            text-align: center;
+            margin: 40px auto;
+            z-index: 1;
+            position: relative;
+        }
+
+        .screenshot img {
+            width: 90%;
+            max-width: 800px;
+            border: 6px solid #d9b88f;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1;
+            position: relative;
+        }
+
+        a.button {
+            background: #d9b88f;
+            color: #5c3d25;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        a.button:hover {
+            background: #cfa065;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.85em;
+            color: #a38660;
+            text-align: center;
+            padding-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="sun"></div>
+        <img src="your-logo.png" alt="Fortress of the Sun Logo">
+        <h1>Fortress of the Sun</h1>
+        <p class="tagline">Build your desert empire — one ancient wall at a time.</p>
+    </header>
+
+    <section class="description">
+        <p><strong>Fortress of the Sun</strong> is a modular city-building game inspired by ancient Persian fortresses. Place pillars, connect walls, and evolve your mudbrick city into a legendary stronghold across the sands of time.</p>
+    </section>
+
+    <section class="screenshot">
+        <img src="screenshot-placeholder.png" alt="Gameplay Screenshot">
+    </section>
+
+    <nav>
+        <a class="button" href="https://github.com/yourusername/fortress-of-the-sun" target="_blank">View on GitHub</a>
+        <a class="button" href="#" target="_blank">Play (Coming Soon)</a>
+    </nav>
+
+    <footer>
+        <p>© 2025 Fortress of the Sun</p>
+    </footer>
+
+</body>
+</html>
